@@ -42,7 +42,7 @@ function Calculator() {
   function operator(e) {
     setCalculate(e.target.value);
     setFormer(parseFloat(result));
-    setResult("");
+    setResult(0);
   }
 
   function account() {
@@ -71,37 +71,37 @@ function Calculator() {
           <OrangeSymbol onClick={operator} value={"÷"}>
             ÷
           </OrangeSymbol>
-          <GrayNumber onClick={ inputNum} value={7}>
+          <GrayNumber onClick={inputNum} value={7}>
             7
           </GrayNumber>
-          <GrayNumber onClick={ inputNum} value={8}>
+          <GrayNumber onClick={inputNum} value={8}>
             8
           </GrayNumber>
-          <GrayNumber onClick={ inputNum} value={9}>
+          <GrayNumber onClick={inputNum} value={9}>
             9
           </GrayNumber>
           <OrangeSymbol onClick={operator} value={"x"}>
             x
           </OrangeSymbol>
-          <GrayNumber onClick={ inputNum} value={4}>
+          <GrayNumber onClick={inputNum} value={4}>
             4
           </GrayNumber>
-          <GrayNumber onClick={ inputNum} value={5}>
+          <GrayNumber onClick={inputNum} value={5}>
             5
           </GrayNumber>
-          <GrayNumber onClick={ inputNum} value={6}>
+          <GrayNumber onClick={inputNum} value={6}>
             6
           </GrayNumber>
           <OrangeSymbol onClick={operator} value={"-"}>
             -
           </OrangeSymbol>
-          <GrayNumber onClick={ inputNum} value={1}>
+          <GrayNumber onClick={inputNum} value={1}>
             1
           </GrayNumber>
-          <GrayNumber onClick={ inputNum} value={2}>
+          <GrayNumber onClick={inputNum} value={2}>
             2
           </GrayNumber>
-          <GrayNumber onClick={ inputNum} value={3}>
+          <GrayNumber onClick={inputNum} value={3}>
             3
           </GrayNumber>
           <OrangeSymbol onClick={operator} value={"+"}>
@@ -109,12 +109,14 @@ function Calculator() {
           </OrangeSymbol>
           <NumZero
             style={{ borderRadius: "35px" }}
-            onClick={ inputNum}
+            onClick={inputNum}
             value={0}
           >
             0
           </NumZero>
-          <GrayNumber onClick={buttonSymbol} value={"."}>.</GrayNumber>
+          <GrayNumber onClick={buttonSymbol} value={"."}>
+            .
+          </GrayNumber>
           <OrangeSymbol onClick={account}>=</OrangeSymbol>
         </BoxButton>
       </BackgroundBox>
